@@ -7,45 +7,45 @@ export default {
             projects: [
                 {
                     name: "Campo Minato",
-                    description: "Campo minato con vanilla JS, no responsive layout",
-                    image: ["../img/campominato.png"],
+                    description: "Minefield vanilla JS, no responsive layout",
+                    image: ["https://i.imgur.com/SIM0rD0.png"],
                     link: "https://hilarious-madeleine-1063e6.netlify.app/",
                 },
                 {
                     name: "SpotifyWeb-Responsive",
                     description: "Refactoring layout Spotify Web responsive",
-                    image: ["../img/SpotifyWeb.png"],
+                    image: ["https://i.imgur.com/3zsoNt6.png"],
                     link: "https://glistening-chimera-b079a0.netlify.app/",
                 },
                 {
                     name: "Boolflix",
-                    description: "Clone della webApp Netflix",
-                    image: ["../img/Boolflix.png"],
+                    description: "Netflix clone",
+                    image: ["https://i.imgur.com/hcmwrXo.png"],
                     link: "https://fantastic-bonbon-03e1a8.netlify.app/",
                 },
                 {
                     name: "API-front-end Card Yu-gi-oh",
-                    description: "Chiamate API lato front-end con Axios",
-                    image: ["../img/ApiFrontend.png"],
+                    description: "API front-end with Axios",
+                    image: ["https://i.imgur.com/tALhj3R.png"],
                     link: "https://bejewelled-cat-206905.netlify.app/",
                 },
                 {
                     name: "BoolZap",
-                    description: "Clone della webApp WhastApp Web",
-                    image: ["../img/Boolzap.png"],
+                    description: "WhastApp Web clone",
+                    image: ["https://i.imgur.com/PcUlMVB.png"],
                     link: "https://golden-daifuku-49ca80.netlify.app/",
                 },
                 {
                     name: "DeliveBOO client-side",
-                    description: "Clone del famoso deliveroo, client-side",
+                    description: "Deliveroo clone",
                     image:
                         [
-                            "../img/Deliveboo2.png",
-                            "../img/Deliveboo1.png",
-                            "../img/Deliveboo3.png",
-                            "../img/Deliveboo4.png",
-                            "../img/Deliveboo5.png",
-                            "../img/Deliveboo6.png",
+                            "https://i.imgur.com/UGiLckt.png",
+                            "https://i.imgur.com/RUocBfI.png",
+                            "https://i.imgur.com/4oaxqSu.png",
+                            "https://i.imgur.com/sCzGTTl.png",
+                            "https://i.imgur.com/MZ3Jyx2.png",
+                            "https://i.imgur.com/QEO7VgI.png",
                         ],
                     link: "https://player.vimeo.com/video/848789609?h=b0db70858d"
                 }
@@ -89,7 +89,7 @@ export default {
     <div class="projects container">
         <div v-for="project in projects" :key="project.name" class="project-card">
             <button class="btn btn-success my-2" @click="showProjectDetails(project)"><em>i</em></button>
-            <img :src="getImagePath(project.image[0])" alt="Project Image" class="project-image" />
+            <img :src="project.image[0]" alt="Project Image" class="project-image" />
             <h3 class="name-project">{{ project.name }}</h3>
             <p class="description">{{ project.description }}</p>
             <a class="text-decoration-none link" :href="project.link" target="_blank">Try this</a>
@@ -103,7 +103,7 @@ export default {
 
             <!-- Carosello -->
             <div class="carousel">
-                <img :src="getImagePath(selectedProject.image[currentImageIndex])" alt="Project Image"
+                <img :src="selectedProject.image[currentImageIndex]" alt="Project Image"
                     class="project-image" />
 
                 <div v-if="selectedProject.image.length > 1" class="carousel-buttons d-flex justify-content-center gap-1 mt-2">

@@ -46,31 +46,31 @@ export default {
                         <figure class="skills my-5 code d-flex gap-4 flex-row align-items-end justify-content-center"
                             :class="{ 'skills-enter-active': isSkillsVisible, 'skills-enter': isSkillsVisible }">
                             <div class="tooltipp" data-tooltip="Html5">
-                                <i class="fa-brands fa-html5" style="color: #f53d00;"></i>
+                                <img src="../img/html.png" alt="">
                             </div>
                             <div class="tooltipp" data-tooltip="Css3">
-                                <i class="fa-brands fa-css3-alt" style="color: #0353dd;"></i>
+                                <img src="../img//css.png" alt="">
                             </div>
                             <div class="tooltipp" data-tooltip="JavaScript">
-                                <i class="fa-brands fa-square-js" style="color: #f7ef02;"></i>
+                                <img src="../img/js.png" alt="">
                             </div>
                             <div class="tooltipp" data-tooltip="Bootstrap">
-                                <i class="fa-brands fa-bootstrap" style="color: #702CF7;"></i>
+                                <img src="../img/bootstrrap.png" alt="">
                             </div>
                             <div class="tooltipp" data-tooltip="Vue.Js">
-                                <i class="fa-brands fa-vuejs" style="color: #327859;"></i>
+                                <img src="../img/vue.png" alt="">
                             </div>
                             <div class="tooltipp" data-tooltip="VITE">
-                                <i class="fa-brands fa-vuejs" style="color: #8966F2;"></i>
+                                <img src="../img/vite.svg" alt="">
                             </div>
                             <div class="tooltipp" data-tooltip="MySql">
-                                <i class="fa-solid fa-database" style="color: #00758F;"></i>
+                                <img src="../img/mysql2.jpg" alt="">
                             </div>
                             <div class="tooltipp" data-tooltip="PHP">
-                                <i class="fa-brands fa-php" style="color: #7A86B8;"></i>
+                                <img src="../img/php.png" alt="">
                             </div>
                             <div class="tooltipp" data-tooltip="Laravel">
-                                <i class="fa-brands fa-laravel" style="color: #EF3E30;"></i>
+                                <img src="../img/laravel.png" alt="">
                             </div>
 
                         </figure>
@@ -91,34 +91,34 @@ export default {
 
             <div :class="{ 'social-enter-active': isSocialVisible, 'social-enter': isSocialVisible }" class="social">
                 <ul class="d-flex gap-3 justify-content-sm-center justify-content-md-end list-unstyled">
-                    <li class="">
+                    <li>
                         <a href="https://www.instagram.com/fedekh_/" blan>
-                            <i class="fa-brands fa-instagram"></i>
+                            <img src="../img/instagram.png" alt="">
                         </a>
                     </li>
-                    <li class="">
+                    <li>
                         <a href="https://www.linkedin.com/in/federico-ceteron4a91b2/">
-                            <i class="fa-brands fa-linkedin"></i>
+                            <img src="../img/linkedin.png" alt="">
                         </a>
                     </li>
-                    <li class="">
+                    <li>
                         <a href="https://github.com/Fedekh?tab=repositories">
-                            <i class="fa-brands fa-github"></i>
+                            <img src="../img/github.png" alt="">
                         </a>
                     </li>
-                    <li class="">
+                    <li>
                         <a href="https://wa.me/qr/UXWDX7A6BJXKC1">
-                            <i class="fa-brands fa-whatsapp"></i>
+                            <img src="../img/whatsapp.png" alt="">
                         </a>
                     </li>
-                    <li class="">
+                    <li>
                         <a mailTo="federicocet@gmail.com" href="https://discord.gg/eaKFCHrV">
-                            <i class="fa-brands fa-slack"></i>
+                            <img src="../img/gmail.png" alt="">
                         </a>
                     </li>
-                    <li class="">
+                    <li>
                         <a href="https://discord.gg/eaKFCHrV">
-                            <i class="fa-brands fa-discord"></i>
+                            <img src="../img/discord.png" alt="">
                         </a>
                     </li>
                 </ul>
@@ -140,6 +140,9 @@ export default {
     .social {
         font-size: 18px;
         color: #07E9B5;
+        img{
+            width: 20px;
+        }
     }
 
     .me {
@@ -150,9 +153,8 @@ export default {
 
     .tooltipp {
         position: relative;
-
-        i {
-            font-size: 20px;
+        img{
+            width: 50px;
         }
 
         &:before {
@@ -253,5 +255,6 @@ export default {
             }
         }
 
-    }}
+    }
+}
 </style>
