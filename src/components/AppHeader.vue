@@ -1,6 +1,12 @@
 <script >
 export default {
     name: "AppHeader",
+    watch: {
+        // Questo watcher ascolta i cambiamenti nella route corrente
+        $route() {
+            this.isClicked = false; // Chiude il menu a tendina quando si cambia rotta
+        }
+    },
     data() {
         return {
             menuLinks: [
@@ -25,7 +31,24 @@ export default {
         }
 
     },
+    mounted() {
+        // Aggiungi un event listener al clic globale
+        document.addEventListener("click", this.handleClickOutside);
+    },
+    beforeDestroy() {
+        // Rimuovi l'event listener quando il componente viene distrutto
+        document.removeEventListener("click", this.handleClickOutside);
+    },
     methods: {
+        handleClickOutside(event) {
+            // Controlla se l'elemento cliccato è dentro il menu o il pulsante del menu
+            const menu = this.$refs.hamburgerMenu;
+            const hamburger = this.$refs.hamburger;
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                // Chiudi il menu a tendina se si fa clic al di fuori
+                this.isClicked = false;
+            }
+        },
         isCurrentRoute(routeName) {
             return this.$route.name === routeName;
         },
@@ -58,13 +81,13 @@ export default {
 
             <!-- hamburger menu -->
             <nav class="second d-md-none">
-                <div id="hamburger" @click="toggleMenu">
+                <div id="hamburger" ref="hamburger" @click="toggleMenu">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </nav>
         </div>
 
-        <ul v-show="isClicked" id="hamburger-menu" class="list-unstyled d-md-none">
+        <ul v-show="isClicked" id="hamburger-menu" ref="hamburgerMenu" class="list-unstyled d-md-none">
             <li @click="isClicked = false" id="ics" class="d-flex justify-content-end me-3">
                 <i class="fa-solid fa-xmark" style="color: #07e9b5;"></i>
             </li>
@@ -84,11 +107,12 @@ export default {
 
 .header {
     position: fixed;
-    background-color: #0000007b;
+    background-color: $header-bg;
     top: 0;
     left: 0;
     z-index: 99;
     right: 0;
+
     .logo {
         max-width: 150px;
     }
@@ -136,7 +160,7 @@ export default {
     }
 
     #hamburger-menu {
-        background-color: #4c504f9a;
+        background-color: $header-bg;
         padding-bottom: 20px;
         position: relative;
         top: -9px;
