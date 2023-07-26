@@ -57,7 +57,7 @@ export default {
     },
     methods: {
         getImagePath(imagePath) {
-            return new URL(imagePath, import.meta.url).toString();
+            return new URL(imagePath, import.meta.url).href;
         },
         showProjectDetails(project) {
             this.showDetails = true;
