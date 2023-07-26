@@ -79,10 +79,12 @@ export default {
                     <section :class="{ 'welcome-enter-active': isWelcomeVisible, 'welcome-enter': isWelcomeVisible }"
                         class="my-5 welcome">
                         <h1>
-                            HELLO WORLD! <br> <span class="name">I'm Federico,</span><br> <span class="highlight">Full Stack Web Developer</span>
+                            HELLO WORLD! <br> <span class="name">I'm Federico,</span><br> <span class="highlight">Full Stack
+                                Web Developer</span>
                         </h1>
-                        <router-link :to="{ name: 'contact' }" class="btn btn-success m-4" aria-current="page">Contact me</router-link>
-                        <router-link :to="{ name: 'about'}" class="btn btn-info" aria-current="page">About me</router-link>
+                        <router-link :to="{ name: 'contact' }" class="btn btn-success m-4" aria-current="page">Contact
+                            me</router-link>
+                        <router-link :to="{ name: 'about' }" class="btn btn-info" aria-current="page">About me</router-link>
                     </section>
                 </div>
             </div>
@@ -206,25 +208,50 @@ export default {
         transform: translateX(0%);
     }
 
-    @media screen and (max-width: 992px) {
-       .container{
-        display: flex !important;
-        flex-direction: column !important;
-        .skills{
-            display: flex !important;
-            gap: 15px !important;
-        }
-        .welcome{
-            text-align: center;
-            h1{
-                font-size: 1rem !important;
+
+
+    @media screen and (max-width: 768px) {
+        .container {
+            .skills {
+                position: relative;
+                top: 150px;
+            }
+
+            .welcome {
+                position: relative !important;
+                bottom: 200px !important;
+            }
+
+            .social {
+                position: relative;
+                bottom: 100px;
             }
         }
-        .social{
-            display: flex;
-            justify-content: center;
-        }
-       }
     }
-}
+
+    @media screen and (max-width: 992px) {
+        .container {
+            display: flex !important;
+            flex-direction: column !important;
+
+            .skills {
+                display: flex !important;
+                gap: 15px !important;
+            }
+
+            .welcome {
+                text-align: center;
+
+                h1 {
+                    font-size: 1rem !important;
+                }
+            }
+
+            .social {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+    }}
 </style>

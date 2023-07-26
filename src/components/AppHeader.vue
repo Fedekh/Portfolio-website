@@ -35,10 +35,7 @@ export default {
         // Aggiungi un event listener al clic globale
         document.addEventListener("click", this.handleClickOutside);
     },
-    beforeDestroy() {
-        // Rimuovi l'event listener quando il componente viene distrutto
-        document.removeEventListener("click", this.handleClickOutside);
-    },
+
     methods: {
         handleClickOutside(event) {
             // Controlla se l'elemento cliccato è dentro il menu o il pulsante del menu

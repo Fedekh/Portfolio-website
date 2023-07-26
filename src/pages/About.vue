@@ -119,7 +119,7 @@ export default {
 
             </div>
 
-            <a href="#" class="up"><i class="fa-solid fa-arrow-up" style="color: #07e9b5;"></i></a>
+            <a href="#" data-tooltip="Up" class="up"><i class="fa-solid fa-arrow-up" style="color: #07e9b5;"></i></a>
 
         </div>
     </div>
@@ -134,6 +134,7 @@ export default {
     width: 100%;
     text-align: center;
     padding: 10px;
+    position: relative;
 
     figure {
 
@@ -149,6 +150,33 @@ export default {
         }
     }
 
+    .up {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
 
-    // background-color: palevioletred;
-}</style>
+        &::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 4px 8px;
+            background-color: #07e9b5;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        &:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+</style>
