@@ -8,7 +8,7 @@ export default {
                 {
                     name: "Campo Minato",
                     description: "Campo minato con vanilla JS, no responsive layout",
-                    image: ["../img/campo minato.png"],
+                    image: ["../img/campominato.png"],
                     link: "https://hilarious-madeleine-1063e6.netlify.app/",
                 },
                 {
@@ -26,7 +26,7 @@ export default {
                 {
                     name: "API-front-end Card Yu-gi-oh",
                     description: "Chiamate API lato front-end con Axios",
-                    image: ["../img/Api Front-end.png"],
+                    image: ["../img/ApiFrontend.png"],
                     link: "https://bejewelled-cat-206905.netlify.app/",
                 },
                 {
@@ -40,12 +40,12 @@ export default {
                     description: "Clone del famoso deliveroo, client-side",
                     image:
                         [
-                            "../img/Deliveboo 2.png",
-                            "../img/Deliveboo 1.png",
-                            "../img/Deliveboo 3.png",
-                            "../img/Deliveboo 4.png",
-                            "../img/Deliveboo 5.png",
-                            "../img/Deliveboo 6.png",
+                            "../img/Deliveboo2.png",
+                            "../img/Deliveboo1.png",
+                            "../img/Deliveboo3.png",
+                            "../img/Deliveboo4.png",
+                            "../img/Deliveboo5.png",
+                            "../img/Deliveboo6.png",
                         ],
                     link: "https://player.vimeo.com/video/848789609?h=b0db70858d"
                 }
