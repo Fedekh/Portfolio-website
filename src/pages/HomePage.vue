@@ -42,7 +42,7 @@ export default {
                 <div class="row row-cols-sm-1 row-cols-md-2">
                     <figure :class="{ 'me-enter-active': isMeVisible, 'me-enter': isMeVisible }"
                         class="main-figure d-flex flex-column align-items-center gap-5 me">
-                        <img class="rounded rounded-pill" src="../img/me (1).jpg" alt="" />
+                        <img class="rounded rounded-pill" src="../img/me1.jpg" alt="" />
                         <figure class="skills my-5 code d-flex gap-4 flex-row align-items-end justify-content-center"
                             :class="{ 'skills-enter-active': isSkillsVisible, 'skills-enter': isSkillsVisible }">
                             <div class="tooltipp" data-tooltip="Html5">
