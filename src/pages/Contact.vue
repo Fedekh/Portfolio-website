@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 // import AppHeader from '../components/AppHeader.vue';
 
 export default {
@@ -27,4 +27,4 @@ export default {
    
     
 }
-</style> -->
+</style>
