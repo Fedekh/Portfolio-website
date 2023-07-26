@@ -79,14 +79,14 @@ export default {
             <!-- hamburger menu -->
             <nav class="second d-md-none">
                 <div id="hamburger" class="mx-5" ref="hamburger" @click="toggleMenu">
-                    <i class="fa-solid fa-bars"></i>
+                    <img src="../img/Hamburgericon.svg.png" alt="">
                 </div>
             </nav>
         </div>
 
         <ul v-show="isClicked" id="hamburger-menu" ref="hamburgerMenu" class="list-unstyled d-md-none">
             <li @click="isClicked = false" id="ics" class="d-flex justify-content-end me-3">
-                <i class="fa-solid fa-xmark" style="color: #07e9b5;"></i>
+                &#x274C;
             </li>
             <li class="nav-item px-3" v-for="item in menuLinks" :key="item.routeName">
                 <router-link :to="{ name: item.routeName }" class="nav-link"
@@ -169,6 +169,9 @@ export default {
             cursor: pointer;
             color: #07E9B5;
             position: relative;
+            img{
+                width: 30px;
+            }
         }
     }
 }

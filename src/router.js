@@ -25,20 +25,19 @@ const router = createRouter({
         {
             path: "/about",
             name: "about",
-            component: () => import('./pages/About.vue') 
+            component: () => import('./pages/About.vue')
         },
         {
             path: "/contact",
             name: "contact",
-            component: () => import('./pages/Contact.vue')  
+            component: () => import('./pages/Contact.vue')
         },
-        //not found viene inserito sempre per ultimo
-        // {
-        //     path: '/:pathMatch(.*)*',
-        //     name: 'not-found',
-        //     component: NotFound 
-        // }
-
+        // not found viene inserito sempre per ultimo
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'notfound',
+            component: () => import('./pages/NotFound.vue')
+        }
     ]
 });
 
