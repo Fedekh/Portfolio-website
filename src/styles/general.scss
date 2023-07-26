@@ -1,2 +1,14 @@
 @import "bootstrap/scss/bootstrap.scss";
 @import "node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import './partials/variables';
+
+
+body{
+    background-color: $bg-1;
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+   
+    img{
+        max-width: 100%;
+    }
+}

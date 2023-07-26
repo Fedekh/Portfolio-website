@@ -13,106 +13,141 @@ export default {
                     routeName: "projects"
                 },
                 {
-                    label: "About me",
+                    label: "About",
                     routeName: "about"
                 },
                 {
-                    label: "Contact us",
+                    label: "Contact",
                     routeName: "contact"
                 }
-            ]
+            ],
+            isClicked: false
         }
-    }
+
+    },
+    methods: {
+        isCurrentRoute(routeName) {
+            return this.$route.name === routeName;
+        },
+        toggleMenu() {
+            this.isClicked = !this.isClicked;
+        },
+    },
 }
 </script>
 
 <template>
-    <div class="header container py-3 d-flex align-items-center justify-content-between text-white">
-        <figure class="logo d-flex justify-content-center align-items-center">
-            <a href="/">
-                <img src="../img/code.png" class="w-25" alt="">
-            </a>
-        </figure>
-        <nav class="d-none d-md-block">
-            <ul class="d-flex nav-bar gap-3 list-unstyled">
-                <li class="nav-item" v-for="item in menuItems">
-                    <router-link :to="{ name: item.routeName }" class="nav-link active" aria-current="page">{{
-                        item.label }}gfdff</router-link>
-                </li>
-            </ul>
-        </nav>
-        <nav class="second d-block d-md-none">
-            <div id="hamburger">
-                <i id="fa-bar" class="fa-solid fa-bars"></i>
-                <ul id="hamburger-menu">
-                    <li><i id="close" class="fa-solid  fa-xmark" style="color: #07e9b5;"></i></li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/links/projects">Projects</a></li>
-                    <li><a href="/links/about">About</a></li>
-                    <li><a href="/links/contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</template>
+    <section class="header">
 
+        <div class=" container d-flex align-items-center justify-content-between text-white">
+            <figure class="logo d-flex justify-content-center align-items-center">
+                <a href="/">
+                    <img src="../img/code.png" class="logo" alt="">
+                </a>
+            </figure>
+
+            <nav class="d-none d-md-block">
+                <ul class="d-flex nav-bar gap-3 list-unstyled">
+                    <li class="nav-item" v-for="item in menuLinks">
+                        <router-link :to="{ name: item.routeName }" class="nav-link "
+                            :class="{ 'active': isCurrentRoute(item.routeName) }" aria-current="page">{{
+                                item.label }}</router-link>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- hamburger menu -->
+            <nav class="second d-md-none">
+                <div id="hamburger" @click="toggleMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+
+        <ul v-show="isClicked" id="hamburger-menu" class="list-unstyled d-md-none">
+            <li @click="isClicked = false" id="ics" class="d-flex justify-content-end me-3">
+                <i class="fa-solid fa-xmark" style="color: #07e9b5;"></i>
+            </li>
+            <li class="nav-item" v-for="item in menuLinks" :key="item.routeName">
+                <router-link :to="{ name: item.routeName }" class="nav-link"
+                    :class="{ 'active': isCurrentRoute(item.routeName) }" aria-current="page"
+                    style="display: inline-block; white-space: nowrap;">
+                    {{ item.label }}
+                </router-link>
+            </li>
+        </ul>
+    </section>
+</template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
-.nav-bar,
-#hamburger-menu {
-    a {
-        position: relative;
-        color: #07e9b5;
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -2px;
-            width: 0;
-            height: 2px;
-            background-color: rgb(173, 251, 3);
-            transition: width 0.3s ease;
-        }
-
-        &::before {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        &::after {
-            right: 50%;
-            transform: translateX(50%);
-        }
-
-        &:hover::before,
-        &:hover::after,
-        &.active::before,
-        &.active::after {
-            width: 100%;
-        }
-
+.header {
+    position: fixed;
+    background-color: #0000007b;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    right: 0;
+    .logo {
+        max-width: 150px;
     }
-}
 
-.second {
-    #hamburger {
+    #ics {
         cursor: pointer;
-        color: #07E9B5;
-        position: relative;
-        top: -20px;
+    }
 
-        #hamburger-menu {
-            display: none;
+    .nav-bar,
+    #hamburger-menu {
+        a {
             position: relative;
-            top: 30px;
+            color: #07e9b5;
+            padding-inline: 0;
 
-            i {
-                position: relative;
-                right: -50px;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                width: 0;
+                height: 2px;
+                background-color: rgb(173, 251, 3);
+                transition: width 0.3s ease;
             }
+
+            &::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &::after {
+                right: 50%;
+                transform: translateX(50%);
+            }
+
+            &:hover::before,
+            &:hover::after,
+            &.active::before,
+            &.active::after {
+                width: 100%;
+            }
+
+        }
+    }
+
+    #hamburger-menu {
+        background-color: #4c504f9a;
+        padding-bottom: 20px;
+        position: relative;
+        top: -9px;
+        z-index: 55;
+    }
+
+    .second {
+        #hamburger {
+            cursor: pointer;
+            color: #07E9B5;
+            position: relative;
         }
     }
 }

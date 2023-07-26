@@ -1,19 +1,27 @@
 <script>
-import AppHeader from '../components/AppHeader.vue';
+// import AppHeader from '../components/AppHeader.vue';
 
 export default {
-    name: "AboutPage",
-    components: {
-        AppHeader
-    },
+    name: "Contact",
+    // components: {
+    // AppHeader
+    // },
 }
 </script>
 
 <template>
-    <div>
-
+    <div class="contact">
+        Sono contact
     </div>
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+
+.contact {
+    background-color: green;
+    width: 100%;
+
+}
+</style>

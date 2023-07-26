@@ -7,14 +7,18 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-
+  <div class="header">
+    <AppHeader />
+  </div>
+  <div class="main">
+    <router-view />
+  </div>
 </template>
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
 
-#app{
-  background-color: blue;
+.header{
+  height: $header-h;
 }
 </style>
