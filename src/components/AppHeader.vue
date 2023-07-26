@@ -78,7 +78,7 @@ export default {
 
             <!-- hamburger menu -->
             <nav class="second d-md-none">
-                <div id="hamburger" ref="hamburger" @click="toggleMenu">
+                <div id="hamburger" class="mx-5" ref="hamburger" @click="toggleMenu">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </nav>
@@ -88,7 +88,7 @@ export default {
             <li @click="isClicked = false" id="ics" class="d-flex justify-content-end me-3">
                 <i class="fa-solid fa-xmark" style="color: #07e9b5;"></i>
             </li>
-            <li class="nav-item" v-for="item in menuLinks" :key="item.routeName">
+            <li class="nav-item px-3" v-for="item in menuLinks" :key="item.routeName">
                 <router-link :to="{ name: item.routeName }" class="nav-link"
                     :class="{ 'active': isCurrentRoute(item.routeName) }" aria-current="page"
                     style="display: inline-block; white-space: nowrap;">

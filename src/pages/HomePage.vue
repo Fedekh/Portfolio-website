@@ -40,11 +40,11 @@ export default {
         <div class="container">
             <div class="wrapper mt-5">
                 <div class="row row-cols-sm-1 row-cols-md-2">
-                    <figure :class="{ 'me-enter-active': isMeVisible, 'me-enter': isMeVisible }"
+                    <figure :class="{ 'me-enter-active me-enter': isMeVisible }"
                         class="main-figure d-flex flex-column align-items-center gap-5 me">
                         <img class="rounded rounded-pill" src="../img/me1.jpg" alt="" />
                         <figure class="skills my-5 code d-flex gap-4 flex-row align-items-end justify-content-center"
-                            :class="{ 'skills-enter-active': isSkillsVisible, 'skills-enter': isSkillsVisible }">
+                            :class="{ 'skills-enter-active skills-enter': isSkillsVisible }">
                             <div class="tooltipp" data-tooltip="Html5">
                                 <img src="../img/html.png" alt="">
                             </div>
@@ -76,48 +76,48 @@ export default {
                         </figure>
                     </figure>
 
-                    <section :class="{ 'welcome-enter-active': isWelcomeVisible, 'welcome-enter': isWelcomeVisible }"
+                    <section :class="{ 'welcome-enter-active welcome-enter': isWelcomeVisible }"
                         class="my-5 welcome">
                         <h1>
                             HELLO WORLD! <br> <span class="name">I'm Federico,</span><br> <span class="highlight">Full Stack
                                 Web Developer</span>
                         </h1>
-                        <router-link :to="{ name: 'contact' }" class="btn btn-success m-4" aria-current="page">Contact
-                            me</router-link>
+                        <router-link :to="{ name: 'projects' }" class="btn btn-success m-4" aria-current="page">Projects</router-link>
                         <router-link :to="{ name: 'about' }" class="btn btn-info" aria-current="page">About me</router-link>
                     </section>
                 </div>
             </div>
 
-            <div :class="{ 'social-enter-active': isSocialVisible, 'social-enter': isSocialVisible }" class="social">
+            <div :class="{ 'social-enter-active social-enter': isSocialVisible }" class="social">
                 <ul class="d-flex gap-3 justify-content-sm-center justify-content-md-end list-unstyled">
                     <li>
-                        <a href="https://www.instagram.com/fedekh_/" blan>
+                        <a href="https://www.instagram.com/fedekh_/" target="_blank">
                             <img src="../img/instagram.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/federico-ceteron4a91b2/">
+                        <a href="https://www.linkedin.com/in/federico-ceteroni-dev/" target="_blank">
                             <img src="../img/linkedin.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/Fedekh?tab=repositories">
+                        <a href="https://github.com/Fedekh?tab=repositories" target="_blank">
                             <img src="../img/github.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="https://wa.me/qr/UXWDX7A6BJXKC1">
+                        <a href="https://wa.me/qr/UXWDX7A6BJXKC1" target="_blank">
                             <img src="../img/whatsapp.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a mailTo="federicocet@gmail.com" href="https://discord.gg/eaKFCHrV">
+                        <a href="mailto:federicocet@gmail.com" target="_blank">
                             <img src="../img/gmail.png" alt="">
                         </a>
                     </li>
+
                     <li>
-                        <a href="https://discord.gg/eaKFCHrV">
+                        <a href="https://discord.gg/eaKFCHrV" target="_blank">
                             <img src="../img/discord.png" alt="">
                         </a>
                     </li>
@@ -140,7 +140,8 @@ export default {
     .social {
         font-size: 18px;
         color: #07E9B5;
-        img{
+
+        img {
             width: 20px;
         }
     }
@@ -153,7 +154,8 @@ export default {
 
     .tooltipp {
         position: relative;
-        img{
+
+        img {
             width: 50px;
         }
 
