@@ -13,7 +13,7 @@ export default {
     <div class="about">
         <div class="container ">
             <figure class="mx-auto">
-                <img class="rounded rounded-pill" src="../img/me (1).jpg" alt="">
+                <img class="rounded rounded-pill" src="../img/me1.jpg" alt="">
             </figure>
 
             <div class="lang text-center">
