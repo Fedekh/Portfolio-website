@@ -22,10 +22,10 @@ export default {
                     label: "About",
                     routeName: "about"
                 },
-                {
-                    label: "Contact",
-                    routeName: "contact"
-                }
+                // {
+                //     label: "Contact",
+                //     routeName: "contact"
+                // }
             ],
             isClicked: false
         }
