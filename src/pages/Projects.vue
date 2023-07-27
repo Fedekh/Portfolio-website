@@ -87,12 +87,17 @@ export default {
 
 <template>
     <div class="projects container">
-        <div v-for="project in projects" :key="project.name" class="project-card">
-            <button class="btn btn-success my-2" @click="showProjectDetails(project)"><em>i</em></button>
+        <div v-for="project in projects" :key="project.name" class="project-card px-1">
+            <div class="mx-2 text-end">
+
+                <button class="btn  btn-success my-2" @click="showProjectDetails(project)"><em>i</em></button>
+            </div>
             <img :src="project.image[0]" alt="Project Image" class="project-image" />
             <h3 class="name-project">{{ project.name }}</h3>
             <p class="description">{{ project.description }}</p>
-            <a class="text-decoration-none link" :href="project.link" target="_blank">Try this</a>
+            <a class="text-decoration-none link" :href="project.link" target="_blank" v-if="project.image.length > 1">See
+                it</a>
+            <a v-else class="text-decoration-none link" :href="project.link" target="_blank">Try it</a>
         </div>
     </div>
 
@@ -103,10 +108,10 @@ export default {
 
             <!-- Carosello -->
             <div class="carousel">
-                <img :src="selectedProject.image[currentImageIndex]" alt="Project Image"
-                    class="project-image" />
+                <img :src="selectedProject.image[currentImageIndex]" alt="Project Image" class="project-image" />
 
-                <div v-if="selectedProject.image.length > 1" class="carousel-buttons d-flex justify-content-center gap-1 mt-2">
+                <div v-if="selectedProject.image.length > 1"
+                    class="carousel-buttons d-flex justify-content-center gap-1 mt-2">
                     <button class="carousel-btn" @click="prevImage">&#8249;</button>
                     <button class="carousel-btn" @click="nextImage">&#8250;</button>
                 </div>
@@ -114,7 +119,9 @@ export default {
 
             <h2 class="name-project">{{ selectedProject.name }}</h2>
             <p class="description">{{ selectedProject.description }}</p>
-            <a class="text-decoration-none link" :href="selectedProject.link" target="_blank">Try this</a>
+            <a class="text-decoration-none link" :href="selectedProject.link" target="_blank"
+                v-if="selectedProject.image.length > 1">See it</a>
+            <a v-else class="text-decoration-none link" :href="selectedProject.link" target="_blank">Try it</a>
         </div>
     </div>
 </template>
@@ -123,20 +130,22 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
+
 .projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
 }
 
 .project-card {
-    width: 30%;
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid #7bd908;
+    width: calc(100% / 3 - 20px);
+    border: 1px solid #9797ba;
     border-radius: 10px;
     transition: box-shadow 0.3s ease;
-    /* Aggiungiamo una transizione per effetto più gradevole */
 
+    /* Aggiungiamo una transizione per effetto più gradevole */
     &:hover {
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
         /* Effetto ombra al passaggio del mouse */
@@ -148,10 +157,12 @@ export default {
 
     // Responsive Styles
     @media screen and (max-width: 768px) {
+
         .project-card {
-            width: 45%;
+            width: 33%;
         }
     }
+
 }
 
 
@@ -241,4 +252,5 @@ export default {
     .project-card {
         width: 100%;
     }
-}</style>
+}
+</style>
