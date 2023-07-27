@@ -40,7 +40,7 @@ export default {
        
         <div class="contact-form">
             <h2>Contattami</h2>
-            <form @submit.prevent="submitForm" netlify>
+            <form @submit.prevent="submitForm" name="contact" method="POST" netlify>
                 <div class="form-group">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" v-model="form.name" required>
