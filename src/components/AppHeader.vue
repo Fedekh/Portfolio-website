@@ -79,7 +79,9 @@ export default {
             <!-- hamburger menu -->
             <nav class="second d-md-none">
                 <div id="hamburger" class="mx-5" ref="hamburger" @click="toggleMenu">
-                    <img src="../img/Hamburgericon.svg.png" alt="">
+                    <!-- <img src="../img/Hamburgericon.svg.png" alt=""> -->
+                    <i class="fa-solid fa-bars" style="color: #00FFC3;"></i>
+
                 </div>
             </nav>
         </div>

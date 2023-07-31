@@ -176,12 +176,12 @@ export default {
 
 .description {
     font-size: 1rem;
-    color: #887ed1;
+    color: #00FFC3;
 }
 
 .link {
     font-size: 1rem;
-    color: #007bff;
+    color: #ffef11;
     text-decoration: none;
 
     &:hover {
