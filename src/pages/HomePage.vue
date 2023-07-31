@@ -40,9 +40,12 @@ export default {
         <div class="container">
             <div class="wrapper mt-5">
                 <div class="row row-cols-sm-1 row-cols-md-2">
+                    <!-- ME -->
                     <figure :class="{ 'me-enter-active me-enter': isMeVisible }"
                         class="main-figure d-flex flex-column align-items-center gap-5 me">
                         <img class="rounded rounded-pill" src="../img/me1.jpg" alt="" />
+
+                        <!-- skills -->
                         <figure class="skills my-5 code d-flex gap-4 flex-row align-items-end justify-content-center"
                             :class="{ 'skills-enter-active skills-enter': isSkillsVisible }">
                             <div class="tooltipp" data-tooltip="Html5">
@@ -76,18 +79,22 @@ export default {
                         </figure>
                     </figure>
 
+                    <!-- Welcome -->
                     <section :class="{ 'welcome-enter-active welcome-enter': isWelcomeVisible }"
                         class="my-5 welcome">
                         <h1>
                             HELLO WORLD! <br> <span class="name">I'm Federico,</span><br> <span class="highlight">Full Stack
                                 Web Developer</span>
                         </h1>
-                        <router-link :to="{ name: 'projects' }" class="btn btn-success m-4" aria-current="page">Projects</router-link>
-                        <router-link :to="{ name: 'about' }" class="btn btn-info" aria-current="page">About me</router-link>
+                        <div class="buttons d-flex justify-content-center justify-content-lg-start gap-2 align-items-center">
+                            <router-link :to="{ name: 'projects' }" class="btn btn-success" aria-current="page">Projects</router-link>
+                            <router-link :to="{ name: 'about' }" class="btn btn-info" aria-current="page">About me</router-link>
+                        </div>
                     </section>
                 </div>
             </div>
 
+            <!-- Social -->
             <div :class="{ 'social-enter-active social-enter': isSocialVisible }" class="social">
                 <ul class="d-flex gap-3 justify-content-sm-center justify-content-md-end list-unstyled">
                     <li>
@@ -218,7 +225,10 @@ export default {
         .container {
             .skills {
                 position: relative;
-                top: 150px;
+                top: 130px;
+                .tooltipp{
+                    width: 30px;
+                }
             }
 
             .welcome {
@@ -228,7 +238,7 @@ export default {
 
             .social {
                 position: relative;
-                bottom: 100px;
+                bottom: 60px;
             }
         }
     }

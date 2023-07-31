@@ -39,7 +39,7 @@ export default {
         <h6 class="text-center ok alert alert-success" :class="{ fade: isSent }" v-if="isSent">Messaggio inviato correttamente</h6>
        
         <div class="contact-form">
-            <h2>Contattami</h2>
+            <h2>Contact me</h2>
             <form @submit.prevent="submitForm" name="contact" method="POST" netlify>
                 <div class="form-group">
                     <label for="name">Nome:</label>
