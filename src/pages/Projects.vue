@@ -87,7 +87,7 @@ export default {
 
 <template>
     <div class="projects container">
-        <div v-for="project in projects" :key="project.name" class="project-card px-1">
+        <div v-for="project in projects" :key="project.name" class="project-card text-center px-1">
             <div class="mx-2 text-end">
 
                 <button class="btn  btn-success my-2" @click="showProjectDetails(project)"><em>i</em></button>
