@@ -7,7 +7,7 @@ export default {
             projects: [
                 {
                     name: "Campo Minato",
-                    description: "Minefield vanilla JS, no responsive layout",
+                    description: "Minefield vanilla JS, no responsive",
                     image: ["https://i.imgur.com/SIM0rD0.png"],
                     link: "https://hilarious-madeleine-1063e6.netlify.app/",
                 },
@@ -87,7 +87,7 @@ export default {
 
 <template>
     <div class="projects container">
-        <div v-for="project in projects" :key="project.name" class="project-card text-center px-1">
+        <div v-for="project in projects" :key="project.name" class="project-card text-center p-2">
             <div class="mx-2 text-end">
 
                 <button class="btn  btn-success my-2" @click="showProjectDetails(project)"><em>i</em></button>
@@ -181,12 +181,11 @@ export default {
 
 .link {
     font-size: 1rem;
-    color: #ffef11;
+    color: #c7c0bd;
     text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
+    padding: 5px 10px;
+    background-color: #157347;
+    border-radius: 5px;
 }
 
 .btn-info {
