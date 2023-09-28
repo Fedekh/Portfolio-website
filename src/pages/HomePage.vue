@@ -46,49 +46,73 @@ export default {
                         <img class="rounded rounded-pill" src="../img/me1.jpg" alt="" />
 
                         <!-- skills -->
-                        <figure class="skills my-5 code d-flex gap-4 flex-row align-items-end justify-content-center"
-                            :class="{ 'skills-enter-active skills-enter': isSkillsVisible }">
-                            <div class="tooltipp" data-tooltip="Html5">
-                                <img src="../img/html.png" alt="">
+                        <figure class="skills my-5 code " :class="{ 'skills-enter-active skills-enter': isSkillsVisible }">
+                            <div class="d-flex mb-5 gap-4 flex-row align-items-end justify-content-center">
+                                <div class="tooltipp" data-tooltip="Html5">
+                                    <!-- <img src="../img/html.png" alt=""> -->
+                                    <img src="https://img.icons8.com/color/96/html-5--v1.png" alt="html-5--v1" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="Css3">
+                                    <!-- <img src="../img//css.png" alt=""> -->
+                                    <img src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="JavaScript">
+                                    <!-- <img src="../img/js.png" alt=""> -->
+                                    <img src="https://img.icons8.com/fluency/96/javascript.png" alt="javascript" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="Bootstrap">
+                                    <!-- <img src="../img/bootstrrap.png" alt=""> -->
+                                    <img src="https://img.icons8.com/color-glass/96/bootstrap.png" alt="bootstrap" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="Vue.Js">
+                                    <!-- <img src="../img/vue.png" alt=""> -->
+                                    <img src="https://img.icons8.com/fluency/96/vuejs.png" alt="vuejs" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="VITE">
+                                    <!-- <img src="../img/vite.svg" alt=""> -->
+                                    <img src="https://img.icons8.com/fluency/96/vite.png" alt="vite" />
+                                </div>
                             </div>
-                            <div class="tooltipp" data-tooltip="Css3">
-                                <img src="../img//css.png" alt="">
+                            <div class="d-flex gap-4 flex-row align-items-end justify-content-center">
+                                <div class="tooltipp" data-tooltip="MySql">
+                                    <!-- <img src="../img/mysql2.jpg" alt=""> -->
+                                    <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo.png"
+                                        alt="external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="PHP">
+                                    <!-- <img src="../img/php.png" alt=""> -->
+                                    <img src="https://img.icons8.com/officel/160/php-logo.png" alt="php-logo" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="Laravel">
+                                    <!-- <img src="../img/laravel.png" alt=""> -->
+                                    <img src="https://img.icons8.com/nolan/96/laravel.png" alt="laravel" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="C#">
+                                    <img src="https://img.icons8.com/color/96/c-sharp-logo-2.png" alt="c-sharp-logo-2" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="SQLServer">
+                                    <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-sql-server-big-data-wanicon-lineal-color-wanicon.png"
+                                        alt="external-sql-server-big-data-wanicon-lineal-color-wanicon" />
+                                </div>
+                                <div class="tooltipp" data-tooltip="Visual Studio">
+                                    <img src="https://img.icons8.com/fluency/96/visual-studio.png" alt="visual-studio" />
+                                </div>
                             </div>
-                            <div class="tooltipp" data-tooltip="JavaScript">
-                                <img src="../img/js.png" alt="">
-                            </div>
-                            <div class="tooltipp" data-tooltip="Bootstrap">
-                                <img src="../img/bootstrrap.png" alt="">
-                            </div>
-                            <div class="tooltipp" data-tooltip="Vue.Js">
-                                <img src="../img/vue.png" alt="">
-                            </div>
-                            <div class="tooltipp" data-tooltip="VITE">
-                                <img src="../img/vite.svg" alt="">
-                            </div>
-                            <div class="tooltipp" data-tooltip="MySql">
-                                <img src="../img/mysql2.jpg" alt="">
-                            </div>
-                            <div class="tooltipp" data-tooltip="PHP">
-                                <img src="../img/php.png" alt="">
-                            </div>
-                            <div class="tooltipp" data-tooltip="Laravel">
-                                <img src="../img/laravel.png" alt="">
-                            </div>
-
                         </figure>
                     </figure>
 
                     <!-- Welcome -->
-                    <section :class="{ 'welcome-enter-active welcome-enter': isWelcomeVisible }"
-                        class="my-5 welcome">
+                    <section :class="{ 'welcome-enter-active welcome-enter': isWelcomeVisible }" class="my-5 welcome">
                         <h1>
                             HELLO WORLD! <br> <span class="name">I'm Federico,</span><br> <span class="highlight">Full Stack
                                 Web Developer</span>
                         </h1>
-                        <div class="buttons d-flex justify-content-center justify-content-lg-start gap-2 align-items-center">
-                            <router-link :to="{ name: 'projects' }" class="btn btn-success" aria-current="page">Projects</router-link>
-                            <router-link :to="{ name: 'about' }" class="btn btn-info" aria-current="page">About me</router-link>
+                        <div
+                            class="buttons d-flex justify-content-center justify-content-lg-start gap-2 align-items-center">
+                            <router-link :to="{ name: 'projects' }" class="btn btn-success"
+                                aria-current="page">Projects</router-link>
+                            <router-link :to="{ name: 'about' }" class="btn btn-info" aria-current="page">About
+                                me</router-link>
                         </div>
                     </section>
                 </div>
@@ -107,6 +131,7 @@ export default {
                             <img src="../img/linkedin.png" alt="">
                         </a>
                     </li>
+
                     <li>
                         <a href="https://github.com/Fedekh?tab=repositories" target="_blank">
                             <img src="../img/github.png" alt="">
@@ -163,14 +188,14 @@ export default {
         position: relative;
 
         img {
-            width: 50px;
+            width: 70px;
         }
 
         &:before {
             content: attr(data-tooltip);
             position: absolute;
-            bottom: 120%;
-            left: 50%;
+            bottom: 130%;
+            left: 27%;
             transform: translateX(-50%);
             padding: 5px 10px;
             background-color: #f09e07;
@@ -226,7 +251,8 @@ export default {
             .skills {
                 position: relative;
                 top: 130px;
-                .tooltipp{
+
+                .tooltipp {
                     width: 30px;
                 }
             }
