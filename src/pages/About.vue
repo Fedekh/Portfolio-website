@@ -45,14 +45,11 @@ export default {
                     developer, feel free to contact me. Thank you!
                 </p>
 
-
-
-
                 <router-link :to="{ name: 'contact' }" class="btn btn-success m-4" aria-current="page">Contact
                     me</router-link>
 
             </div>
-            <div class="lang text-center">
+            <!-- <div class="lang text-center">
 
                 <img class="my-3" src="../img/it.svg" alt="">
                 <p>
@@ -88,7 +85,7 @@ export default {
                 <router-link :to="{ name: 'contact' }" class="btn btn-success m-4" aria-current="page">Contact
                     me</router-link>
 
-            </div>
+            </div> -->
 
             <a href="#" data-tooltip="Up" class="up"><i class="fa-solid fa-arrow-up" style="color: #07e9b5;"></i></a>
 

@@ -48,43 +48,34 @@ export default {
                         <!-- skills -->
                         <figure class="skills my-5 code " :class="{ 'skills-enter-active skills-enter': isSkillsVisible }">
                             <div class="d-flex mb-5 gap-4 flex-row align-items-end justify-content-center">
-                                <div class="tooltipp" data-tooltip="Html5">
-                                    <!-- <img src="../img/html.png" alt=""> -->
+                                <div class="tooltipp d-flex gap-4 flex-row align-items-end justify-content-center" data-tooltip="Html5">
                                     <img src="https://img.icons8.com/color/96/html-5--v1.png" alt="html-5--v1" />
                                 </div>
                                 <div class="tooltipp" data-tooltip="Css3">
-                                    <!-- <img src="../img//css.png" alt=""> -->
                                     <img src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
                                 </div>
                                 <div class="tooltipp" data-tooltip="JavaScript">
-                                    <!-- <img src="../img/js.png" alt=""> -->
                                     <img src="https://img.icons8.com/fluency/96/javascript.png" alt="javascript" />
                                 </div>
                                 <div class="tooltipp" data-tooltip="Bootstrap">
-                                    <!-- <img src="../img/bootstrrap.png" alt=""> -->
                                     <img src="https://img.icons8.com/color-glass/96/bootstrap.png" alt="bootstrap" />
                                 </div>
                                 <div class="tooltipp" data-tooltip="Vue.Js">
-                                    <!-- <img src="../img/vue.png" alt=""> -->
                                     <img src="https://img.icons8.com/fluency/96/vuejs.png" alt="vuejs" />
                                 </div>
                                 <div class="tooltipp" data-tooltip="VITE">
-                                    <!-- <img src="../img/vite.svg" alt=""> -->
                                     <img src="https://img.icons8.com/fluency/96/vite.png" alt="vite" />
                                 </div>
                             </div>
                             <div class="d-flex gap-4 flex-row align-items-end justify-content-center">
                                 <div class="tooltipp" data-tooltip="MySql">
-                                    <!-- <img src="../img/mysql2.jpg" alt=""> -->
                                     <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo.png"
                                         alt="external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo" />
                                 </div>
                                 <div class="tooltipp" data-tooltip="PHP">
-                                    <!-- <img src="../img/php.png" alt=""> -->
                                     <img src="https://img.icons8.com/officel/160/php-logo.png" alt="php-logo" />
                                 </div>
                                 <div class="tooltipp" data-tooltip="Laravel">
-                                    <!-- <img src="../img/laravel.png" alt=""> -->
                                     <img src="https://img.icons8.com/nolan/96/laravel.png" alt="laravel" />
                                 </div>
                                 <div class="tooltipp" data-tooltip="C#">
@@ -122,18 +113,13 @@ export default {
             <div :class="{ 'social-enter-active social-enter': isSocialVisible }" class="social">
                 <ul class="d-flex gap-3 justify-content-sm-center justify-content-md-end list-unstyled">
                     <li>
-                        <a href="https://www.instagram.com/fedekh_/" target="_blank">
-                            <img src="../img/instagram.png" alt="">
-                        </a>
-                    </li>
-                    <li>
                         <a href="https://www.linkedin.com/in/federico-ceteroni-dev/" target="_blank">
                             <img src="../img/linkedin.png" alt="">
                         </a>
                     </li>
-
+                    
                     <li>
-                        <a href="https://github.com/Fedekh?tab=repositories" target="_blank">
+                        <a href="https://github.com/Fedekh" target="_blank">
                             <img src="../img/github.png" alt="">
                         </a>
                     </li>
@@ -147,12 +133,17 @@ export default {
                             <img src="../img/gmail.png" alt="">
                         </a>
                     </li>
-
                     <li>
+                        <a href="https://www.instagram.com/fedekh_/" target="_blank">
+                            <img src="../img/instagram.png" alt="">
+                        </a>
+                    </li>
+
+                    <!-- <li>
                         <a href="https://discord.gg/eaKFCHrV" target="_blank">
                             <img src="../img/discord.png" alt="">
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -202,6 +193,7 @@ export default {
             color: #fff;
             border-radius: 5px;
             opacity: 0;
+            z-index: 55;
             visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
@@ -218,13 +210,18 @@ export default {
         transform: translateX(-100%);
     }
 
+    .welcome{
+        .name{
+            color: rgb(255, 115, 0);
+        }
+    }
     .welcome,
     .social {
         opacity: 0;
         transform: translateX(100%);
     }
 
-    /* Aggiungiamo le transizioni per i blocchi */
+    /* le transizioni per i blocchi */
     .me-enter-active,
     .skills-enter-active,
     .welcome-enter-active,
@@ -250,8 +247,11 @@ export default {
         .container {
             .skills {
                 position: relative;
-                top: 130px;
-
+                top: 180px;
+                left: calc(100% / 10);
+                //display: flex; /* Aggiungi display: flex; */
+                 flex-wrap: wrap; /* Aggiungi flex-wrap: wrap; */
+                margin: 0 auto;
                 .tooltipp {
                     width: 30px;
                 }
@@ -264,7 +264,7 @@ export default {
 
             .social {
                 position: relative;
-                bottom: 60px;
+                bottom: 40px;
             }
         }
     }
@@ -276,7 +276,8 @@ export default {
 
             .skills {
                 display: flex !important;
-                gap: 15px !important;
+                flex-wrap: wrap;
+                // gap: 15px !important;
             }
 
             .welcome {
@@ -289,7 +290,8 @@ export default {
 
             .social {
                 display: flex;
-                justify-content: center;
+                justify-content: end;
+                margin-right: 70px;
             }
         }
 

@@ -26,8 +26,8 @@ export default {
                 message: "",
             };
             setTimeout(() => {
-            this.isSent = false;
-                
+                this.isSent = false;
+
             }, 5000);
         },
     },
@@ -35,10 +35,44 @@ export default {
 </script>
 
 <template>
-    <div class="container contact">
-        <h6 class="text-center ok alert alert-success" :class="{ fade: isSent }" v-if="isSent">Messaggio inviato correttamente</h6>
-       
-        <div class="contact-form">
+    <div class="container contact d-flex justify-content-center align-items-center">
+        <div class="social">
+            <ul class="list-unstyled">
+                <li class="social-icon d-flex gap-4 align-items-center my-5">
+                    <a href="mailto:federicocet@gmail.com" target="_blank">
+                        <img src="../img/gmail.png" alt="Gmail">
+                    </a>
+                    <p class="p-0 m-0">Email</p>
+                </li>
+                <li class="social-icon d-flex gap-4 align-items-center my-5">
+                    <a href="https://www.linkedin.com/in/federico-ceteroni-dev/" target="_blank">
+                        <img src="../img/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <p class="p-0 m-0">LinkedIn</p>
+                </li>
+                <li class="social-icon d-flex gap-4 align-items-center my-5">
+                    <a href="https://github.com/Fedekh" target="_blank">
+                        <img src="../img/github.png" alt="GitHub">
+                    </a>
+                    <p class="p-0 m-0">Github</p>
+                </li>
+                <li class="social-icon d-flex gap-4 align-items-center my-5">
+                    <a href="https://wa.me/qr/UXWDX7A6BJXKC1" target="_blank">
+                        <img src="../img/whatsapp.png" alt="WhatsApp">
+                    </a>
+                    <p class="p-0 m-0">WhastApp</p>
+                </li>
+                <li class="social-icon d-flex gap-4 align-items-center my-5">
+                    <a href="https://www.instagram.com/fedekh_/" target="_blank">
+                        <img src="../img/instagram.png" alt="Instagram">
+                    </a>
+                    <p class="p-0 m-0">Instagram</p>
+                </li>
+            </ul>
+        </div>
+        <!-- <h6 class="text-center ok alert alert-success" :class="{ fade: isSent }" v-if="isSent">Messaggio inviato correttamente</h6> -->
+
+        <!-- <div class="contact-form">
             <h2>Contact me</h2>
             <form netlify  @submit.prevent="submitForm" name="contact" method="POST">
                 <div class="form-group">
@@ -63,7 +97,7 @@ export default {
                 </div>
                 <button type="submit">Invia</button>
             </form>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -71,19 +105,38 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
+.contact {
+    height: calc(100vh - $header-h);
+
+    img {
+        max-width: 100px;
+
+        @media screen and (max-width: 992px) {
+            max-width: 70px !important;
+        }
+
+        @media screen and (max-width: 768px) {
+            max-width: 30px !important;
+        }
+    }
+}
+
+
 @keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Applica l'animazione solo quando la classe .fade è presente */
 .ok.fade {
-  animation: fadeOut 5s ease-in;
+    animation: fadeOut 5s ease-in;
 }
+
 .contact-form {
     max-width: 400px;
     margin: 40px auto;
@@ -144,5 +197,4 @@ export default {
             }
         }
     }
-}
-</style>
+}</style>

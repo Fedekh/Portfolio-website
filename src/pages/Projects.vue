@@ -10,34 +10,45 @@ export default {
                     description: "Minefield vanilla JS, no responsive",
                     image: ["https://i.imgur.com/SIM0rD0.png"],
                     link: "https://hilarious-madeleine-1063e6.netlify.app/",
+                    github : "https://github.com/Fedekh/js-campominato-dom"
                 },
                 {
                     name: "SpotifyWeb-Responsive",
                     description: "Refactoring layout Spotify Web responsive",
                     image: ["https://i.imgur.com/3zsoNt6.png"],
                     link: "https://glistening-chimera-b079a0.netlify.app/",
+                    github : "https://github.com/Fedekh/html-css-spotifyweb"
+
                 },
                 {
                     name: "Boolflix",
                     description: "Netflix clone",
                     image: ["https://i.imgur.com/hcmwrXo.png"],
                     link: "https://fantastic-bonbon-03e1a8.netlify.app/",
+                    github : "https://github.com/Fedekh/vite-boolflix"
+
                 },
                 {
                     name: "API-front-end Card Yu-gi-oh",
                     description: "API front-end with Axios",
                     image: ["https://i.imgur.com/tALhj3R.png"],
                     link: "https://bejewelled-cat-206905.netlify.app/",
+                    github : "https://github.com/Fedekh/vite-breaking-bad"
+
                 },
                 {
                     name: "BoolZap",
                     description: "WhastApp Web clone",
                     image: ["https://i.imgur.com/PcUlMVB.png"],
                     link: "https://golden-daifuku-49ca80.netlify.app/",
+                    github : "https://github.com/Fedekh/vue-boolzapp"
+
                 },
                 {
                     name: "DeliveBOO client-side",
                     description: "Deliveroo clone",
+                    github : "https://github.com/Fedekh/deliveboo-serverside-laravel",
+
                     image:
                         [
                             "https://i.imgur.com/UGiLckt.png",
@@ -87,17 +98,25 @@ export default {
 
 <template>
     <div class="projects container">
-        <div v-for="project in projects" :key="project.name" class="project-card text-center p-2">
-            <div class="mx-2 text-end">
-
-                <button class="btn  btn-success my-2" @click="showProjectDetails(project)"><em>i</em></button>
+        <div v-for="project in projects" :key="project.name" class="project-card d-flex flex-column justify-content-between text-center p-2">
+            <div class="">
+                <div class="mx-2 text-end">
+                    <button class="btn  btn-success my-2" @click="showProjectDetails(project)"><em>i</em></button>
+                </div>
+                <img :src="project.image[0]" alt="Project Image" class="project-image" />
+                <h3 class="name-project">{{ project.name }}</h3>
+                <p class="description">{{ project.description }}</p>
             </div>
-            <img :src="project.image[0]" alt="Project Image" class="project-image" />
-            <h3 class="name-project">{{ project.name }}</h3>
-            <p class="description">{{ project.description }}</p>
-            <a class="text-decoration-none link" :href="project.link" target="_blank" v-if="project.image.length > 1">See
-                it</a>
-            <a v-else class="text-decoration-none link" :href="project.link" target="_blank">Try it</a>
+                <div>
+                    <div v-if="project.image.length > 1" class="d-flex justify-content-between align-items-end">
+                        <a class="text-decoration-none link" :href="project.github" target="_blank">Repo github</a>
+                        <a class="text-decoration-none link" :href="project.link" target="_blank">Demo (Video)</a>
+                    </div>
+                    <div v-else class="d-flex justify-content-between align-items-end">
+                        <a class="text-decoration-none link" :href="project.github" target="_blank">Repo github</a>
+                        <a class="text-decoration-none link" :href="project.link" target="_blank">Demo</a>
+                    </div>
+                </div>
         </div>
     </div>
 
@@ -119,9 +138,16 @@ export default {
 
             <h2 class="name-project">{{ selectedProject.name }}</h2>
             <p class="description">{{ selectedProject.description }}</p>
-            <a class="text-decoration-none link" :href="selectedProject.link" target="_blank"
-                v-if="selectedProject.image.length > 1">See it</a>
-            <a v-else class="text-decoration-none link" :href="selectedProject.link" target="_blank">Try it</a>
+            <div>
+                    <div v-if="selectedProject.image.length > 1" class="d-flex justify-content-between align-items-end">
+                        <a class="text-decoration-none link" :href="selectedProject.github" target="_blank">Repo github</a>
+                        <a class="text-decoration-none link" :href="selectedProject.link" target="_blank">Demo (Video)</a>
+                    </div>
+                    <div v-else class="d-flex justify-content-between align-items-end">
+                        <a class="text-decoration-none link" :href="selectedProject.github" target="_blank">Repo github</a>
+                        <a class="text-decoration-none link" :href="selectedProject.link" target="_blank">Demo</a>
+                    </div>
+                </div>
         </div>
     </div>
 </template>
