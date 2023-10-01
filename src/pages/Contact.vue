@@ -35,6 +35,8 @@ export default {
 </script>
 
 <template>
+
+    <h2 class="mt-4 container text-center">Contattami:</h2>
     <div class="container contact d-flex justify-content-center align-items-center">
         <div class="social">
             <ul class="list-unstyled">
@@ -109,7 +111,7 @@ export default {
     height: calc(100vh - $header-h);
 
     img {
-        max-width: 100px;
+        max-width: 80px;
 
         @media screen and (max-width: 992px) {
             max-width: 70px !important;

@@ -48,7 +48,8 @@ export default {
                         <!-- skills -->
                         <figure class="skills my-5 code " :class="{ 'skills-enter-active skills-enter': isSkillsVisible }">
                             <div class="d-flex mb-5 gap-4 flex-row align-items-end justify-content-center">
-                                <div class="tooltipp d-flex gap-4 flex-row align-items-end justify-content-center" data-tooltip="Html5">
+                                <div class="tooltipp d-flex gap-4 flex-row align-items-end justify-content-center"
+                                    data-tooltip="Html5">
                                     <img src="https://img.icons8.com/color/96/html-5--v1.png" alt="html-5--v1" />
                                 </div>
                                 <div class="tooltipp" data-tooltip="Css3">
@@ -117,7 +118,7 @@ export default {
                             <img src="../img/linkedin.png" alt="">
                         </a>
                     </li>
-                    
+
                     <li>
                         <a href="https://github.com/Fedekh" target="_blank">
                             <img src="../img/github.png" alt="">
@@ -210,11 +211,12 @@ export default {
         transform: translateX(-100%);
     }
 
-    .welcome{
-        .name{
+    .welcome {
+        .name {
             color: rgb(255, 115, 0);
         }
     }
+
     .welcome,
     .social {
         opacity: 0;
@@ -242,33 +244,6 @@ export default {
     }
 
 
-
-    @media screen and (max-width: 768px) {
-        .container {
-            .skills {
-                position: relative;
-                top: 180px;
-                left: calc(100% / 10);
-                //display: flex; /* Aggiungi display: flex; */
-                 flex-wrap: wrap; /* Aggiungi flex-wrap: wrap; */
-                margin: 0 auto;
-                .tooltipp {
-                    width: 30px;
-                }
-            }
-
-            .welcome {
-                position: relative !important;
-                bottom: 200px !important;
-            }
-
-            .social {
-                position: relative;
-                bottom: 40px;
-            }
-        }
-    }
-
     @media screen and (max-width: 992px) {
         .container {
             display: flex !important;
@@ -277,7 +252,6 @@ export default {
             .skills {
                 display: flex !important;
                 flex-wrap: wrap;
-                // gap: 15px !important;
             }
 
             .welcome {
@@ -296,5 +270,36 @@ export default {
         }
 
     }
-}
-</style>
+
+    @media screen and (max-width: 768px) {
+        .container {
+            .skills {
+                position: relative;
+                top: 180px;
+                left: calc(100% / 10);
+                //display: flex; /* Aggiungi display: flex; */
+                flex-wrap: wrap;
+                /* Aggiungi flex-wrap: wrap; */
+                margin: 0 auto;
+
+                .tooltipp {
+                    width: 30px;
+                }
+            }
+
+            .welcome {
+                position: relative !important;
+                bottom: 200px !important;
+            }
+
+            .social {
+                position: relative;
+                bottom: 40px;
+                justify-content: center;
+                margin-right:0 ;
+            }
+        }
+    }
+
+
+}</style>
