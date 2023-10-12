@@ -105,7 +105,9 @@ export default {
                                 aria-current="page">Projects</router-link>
                             <router-link :to="{ name: 'about' }" class="btn btn-info" aria-current="page">About
                                 me</router-link>
+                                <a href="../../public/cv.pdf" download class="btn btn-warning">Download CV</a>
                         </div>
+
                     </section>
                 </div>
             </div>
