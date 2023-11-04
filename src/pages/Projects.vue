@@ -48,7 +48,6 @@ export default {
                     name: "DeliveBOO client-side",
                     description: "Deliveroo clone",
                     github : "https://github.com/Fedekh/deliveboo-serverside-laravel",
-
                     image:
                         [
                             "https://i.imgur.com/UGiLckt.png",
@@ -59,6 +58,13 @@ export default {
                             "https://i.imgur.com/QEO7VgI.png",
                         ],
                     link: "https://player.vimeo.com/video/848789609?h=b0db70858d"
+                },
+                {
+                    name: "FotoAlbum WebApp Backend + Frontend\n",
+                    description: "Admin's portal to manage their photos",
+                    github : "https://github.com/Fedekh/net-il-mio-fotoalbum",
+                    image:['https://postimg.cc/3kVkpmy7'],
+                    link:'https://dai.ly/k5lFxfjM4Sjm8izChQR'
                 }
             ],
             showDetails: false,
