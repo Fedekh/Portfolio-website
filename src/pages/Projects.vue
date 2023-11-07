@@ -63,7 +63,10 @@ export default {
                     name: "FotoAlbum WebApp Backend + Frontend\n",
                     description: "Admin's portal to manage their photos",
                     github : "https://github.com/Fedekh/net-il-mio-fotoalbum",
-                    image:['https://postimg.cc/3kVkpmy7'],
+                    image:[
+                            'https://postimg.cc/3kVkpmy7',
+                            'https://i.postimg.cc/9fFZ6BC4/FotoApp.png'
+                            ],
                     link:'https://dai.ly/k5lFxfjM4Sjm8izChQR'
                 }
             ],
