@@ -112,7 +112,7 @@ export default {
                 <div class="mx-2 text-end">
                     <button class="btn  btn-success my-2" @click="showProjectDetails(project)"><em>i</em></button>
                 </div>
-                <img :src="project.image[0]" alt="Project Image" class="project-image" />
+                <img :src="project.image[0]" alt="Project Image" @click="showProjectDetails(project)" class="project-image" />
                 <h3 class="name-project">{{ project.name }}</h3>
                 <p class="description">{{ project.description }}</p>
             </div>
