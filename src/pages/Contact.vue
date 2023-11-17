@@ -59,7 +59,7 @@ export default {
                     <p class="p-0 m-0">Github</p>
                 </li>
                 <li class="social-icon d-flex gap-4 align-items-center my-5">
-                    <a href="https://wa.me/qr/UXWDX7A6BJXKC1" target="_blank">
+                    <a href="https://wa.me/message/4XIEE5MW6UPYA1" target="_blank">
                         <img src="../img/whatsapp.png" alt="WhatsApp">
                     </a>
                     <p class="p-0 m-0">WhastApp</p>
