@@ -1,10 +1,7 @@
 <script>
-// import AppHeader from '../components/AppHeader.vue';
-
 export default {
     name: "HomePage",
     components: {
-
     },
     data() {
         return {
@@ -46,48 +43,51 @@ export default {
                         <img class="rounded rounded-pill" src="../img/me1.jpg" alt="" />
 
                         <!-- skills -->
-                        <figure class="skills my-5 code " :class="{ 'skills-enter-active skills-enter': isSkillsVisible }">
+                        <figure class="skills my-5 code "
+                            :class="{ 'skills-enter-active skills-enter': isSkillsVisible }">
                             <div class="d-flex mb-5 gap-4 flex-row align-items-end justify-content-center">
-                                <div class="tooltipp d-flex gap-4 flex-row align-items-end justify-content-center"
+                                <div class=" d-flex gap-4 flex-row align-items-end justify-content-center"
                                     data-tooltip="Html5">
                                     <img src="https://img.icons8.com/color/96/html-5--v1.png" alt="html-5--v1" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="Css3">
+                                <div title="Css3">
                                     <img src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="JavaScript">
+                                <div title="JavaScript">
                                     <img src="https://img.icons8.com/fluency/96/javascript.png" alt="javascript" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="Bootstrap">
+                                <div title="Bootstrap">
                                     <img src="https://img.icons8.com/color-glass/96/bootstrap.png" alt="bootstrap" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="Vue.Js">
+                                <div title="Vue.Js">
                                     <img src="https://img.icons8.com/fluency/96/vuejs.png" alt="vuejs" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="VITE">
+                                <div title="VITE">
                                     <img src="https://img.icons8.com/fluency/96/vite.png" alt="vite" />
                                 </div>
                             </div>
                             <div class="d-flex gap-4 flex-row align-items-end justify-content-center">
-                                <div class="tooltipp" data-tooltip="MySql">
+                                <div title="MySql">
                                     <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo.png"
                                         alt="external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="PHP">
+                                <div title="PHP">
                                     <img src="https://img.icons8.com/officel/160/php-logo.png" alt="php-logo" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="Laravel">
+                                <div title="Laravel">
                                     <img src="https://img.icons8.com/nolan/96/laravel.png" alt="laravel" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="C#">
-                                    <img src="https://img.icons8.com/color/96/c-sharp-logo-2.png" alt="c-sharp-logo-2" />
+                                <div title="C#">
+                                    <img src="https://img.icons8.com/color/96/c-sharp-logo-2.png"
+                                        alt="c-sharp-logo-2" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="SQLServer">
+                                <div title="SQLServer">
                                     <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-sql-server-big-data-wanicon-lineal-color-wanicon.png"
                                         alt="external-sql-server-big-data-wanicon-lineal-color-wanicon" />
                                 </div>
-                                <div class="tooltipp" data-tooltip="Visual Studio">
-                                    <img src="https://img.icons8.com/fluency/96/visual-studio.png" alt="visual-studio" />
+                                <div title="Visual Studio">
+                                    <img src="https://img.icons8.com/fluency/96/visual-studio.png"
+                                        alt="visual-studio" />
                                 </div>
                             </div>
                         </figure>
@@ -96,7 +96,8 @@ export default {
                     <!-- Welcome -->
                     <section :class="{ 'welcome-enter-active welcome-enter': isWelcomeVisible }" class="my-5 welcome">
                         <h1>
-                            HELLO WORLD! <br> <span class="name">I'm Federico,</span><br> <span class="highlight">Full Stack
+                            HELLO WORLD! <br> <span class="name">I'm Federico,</span><br> <span class="highlight">Full
+                                Stack
                                 Web Developer</span>
                         </h1>
                         <div
@@ -105,7 +106,7 @@ export default {
                                 aria-current="page">Projects</router-link>
                             <router-link :to="{ name: 'about' }" class="btn btn-info" aria-current="page">About
                                 me</router-link>
-                                <a href="../../public/cv.pdf" download class="btn btn-warning">&dArr; CV</a>
+                            <a href="/miocv.pdf" download class="btn btn-warning">&dArr; CV</a>
                         </div>
 
                     </section>
@@ -115,46 +116,39 @@ export default {
             <!-- Social -->
             <div :class="{ 'social-enter-active social-enter': isSocialVisible }" class="social">
                 <ul class="d-flex gap-3 justify-content-sm-center justify-content-md-end list-unstyled">
-                    <li>
+                    <li title="Linkedin">
                         <a href="https://www.linkedin.com/in/federico-ceteroni-dev/" target="_blank">
                             <img src="../img/linkedin.png" alt="">
                         </a>
                     </li>
-
-                    <li>
+                    <li title="Github">
                         <a href="https://github.com/Fedekh" target="_blank">
                             <img src="../img/github.png" alt="">
                         </a>
                     </li>
-                    <li>
+                    <li title="Whatsapp">
                         <a href="https://wa.me/qr/UXWDX7A6BJXKC1" target="_blank">
                             <img src="../img/whatsapp.png" alt="">
                         </a>
                     </li>
-                    <li>
+                    <li title="Gmail">
                         <a href="mailto:federicocet@gmail.com" target="_blank">
                             <img src="../img/gmail.png" alt="">
                         </a>
                     </li>
-                    <li>
+                    <li title="Instagram">
                         <a href="https://www.instagram.com/fedekh_/" target="_blank">
                             <img src="../img/instagram.png" alt="">
                         </a>
                     </li>
-
-                    <!-- <li>
-                        <a href="https://discord.gg/eaKFCHrV" target="_blank">
-                            <img src="../img/discord.png" alt="">
-                        </a>
-                    </li> -->
                 </ul>
             </div>
         </div>
     </div>
 </template>
-  
-  
-  
+
+
+
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
@@ -178,130 +172,95 @@ export default {
         }
     }
 
-    .tooltipp {
-        position: relative;
+}
 
-        img {
-            width: 70px;
-        }
+.main-figure,
+.skills {
+    opacity: 0;
+    transform: translateX(-100%);
+}
 
-        &:before {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 130%;
-            left: 27%;
-            transform: translateX(-50%);
-            padding: 5px 10px;
-            background-color: #f09e07;
-            color: #fff;
-            border-radius: 5px;
-            opacity: 0;
-            z-index: 55;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        &:hover:before {
-            opacity: 1;
-            visibility: visible;
-        }
+.welcome {
+    .name {
+        color: rgb(255, 115, 0);
     }
+}
 
-    .main-figure,
-    .skills {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
+.welcome,
+.social {
+    opacity: 0;
+    transform: translateX(100%);
+}
 
-    .welcome {
-        .name {
-            color: rgb(255, 115, 0);
-        }
-    }
+/* le transizioni per i blocchi */
+.me-enter-active,
+.skills-enter-active,
+.welcome-enter-active,
+.social-enter-active {
+    transition: opacity 1.5s, transform 1.5s;
+}
 
-    .welcome,
-    .social {
-        opacity: 0;
-        transform: translateX(100%);
-    }
+.me-enter,
+.skills-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+}
 
-    /* le transizioni per i blocchi */
-    .me-enter-active,
-    .skills-enter-active,
-    .welcome-enter-active,
-    .social-enter-active {
-        transition: opacity 1.5s, transform 1.5s;
-    }
-
-    .me-enter,
-    .skills-enter-active {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-
-    .welcome-enter,
-    .social-enter-active {
-        opacity: 1;
-        transform: translateX(0%);
-    }
+.welcome-enter,
+.social-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+}
 
 
-    @media screen and (max-width: 992px) {
-        .container {
+@media screen and (max-width: 992px) {
+    .container {
+        display: flex !important;
+        flex-direction: column !important;
+
+        .skills {
             display: flex !important;
-            flex-direction: column !important;
+            flex-wrap: wrap;
+        }
 
-            .skills {
-                display: flex !important;
-                flex-wrap: wrap;
-            }
+        .welcome {
+            text-align: center;
 
-            .welcome {
-                text-align: center;
-
-                h1 {
-                    font-size: 1rem !important;
-                }
-            }
-
-            .social {
-                display: flex;
-                justify-content: end;
-                margin-right: 70px;
+            h1 {
+                font-size: 1rem !important;
             }
         }
 
-    }
-
-    @media screen and (max-width: 768px) {
-        .container {
-            .skills {
-                position: relative;
-                top: 180px;
-                left: calc(100% / 10);
-                //display: flex; /* Aggiungi display: flex; */
-                flex-wrap: wrap;
-                /* Aggiungi flex-wrap: wrap; */
-                margin: 0 auto;
-
-                .tooltipp {
-                    width: 30px;
-                }
-            }
-
-            .welcome {
-                position: relative !important;
-                bottom: 200px !important;
-            }
-
-            .social {
-                position: relative;
-                bottom: 40px;
-                justify-content: center;
-                margin-right:0 ;
-            }
+        .social {
+            display: flex;
+            justify-content: end;
+            margin-right: 70px;
         }
     }
 
+}
 
-}</style>
+@media screen and (max-width: 768px) {
+    .container {
+        .skills {
+            position: relative;
+            top: 180px;
+            left: calc(100% / 10);
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .welcome {
+            position: relative !important;
+            bottom: 200px !important;
+        }
+
+        .social {
+            position: relative;
+            bottom: 40px;
+            justify-content: center;
+            margin-right: 0;
+        }
+    }
+}
+</style>
