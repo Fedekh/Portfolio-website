@@ -53,11 +53,15 @@ export default {
                                 <div title="Css3">
                                     <img src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
                                 </div>
-                                <div title="JavaScript">
-                                    <img src="https://img.icons8.com/fluency/96/javascript.png" alt="javascript" />
-                                </div>
                                 <div title="Bootstrap">
                                     <img src="https://img.icons8.com/color-glass/96/bootstrap.png" alt="bootstrap" />
+                                </div>
+                                <div title="Tailwind">
+                                    <img src="https://img.icons8.com/?size=100&id=WoopfRcDj3RF&format=png&color=000000"
+                                        alt="Tailwind" />
+                                </div>
+                                <div title="JavaScript">
+                                    <img src="https://img.icons8.com/fluency/96/javascript.png" alt="javascript" />
                                 </div>
                                 <div title="Vue.Js">
                                     <img src="https://img.icons8.com/fluency/96/vuejs.png" alt="vuejs" />
@@ -65,12 +69,16 @@ export default {
                                 <div title="VITE">
                                     <img src="https://img.icons8.com/fluency/96/vite.png" alt="vite" />
                                 </div>
+                                <div title="React">
+                                    <img src="https://img.icons8.com/?size=100&id=bzf0DqjXFHIW&format=png&color=000000"
+                                        alt="React" />
+                                </div>
+                                <div title="Typescript">
+                                    <img src="https://img.icons8.com/?size=100&id=Xf1sHBmY73hA&format=png&color=000000"
+                                        alt="Typescript" />
+                                </div>
                             </div>
                             <div class="d-flex gap-4 flex-row align-items-end justify-content-center">
-                                <div title="MySql">
-                                    <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo.png"
-                                        alt="external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo" />
-                                </div>
                                 <div title="PHP">
                                     <img src="https://img.icons8.com/officel/160/php-logo.png" alt="php-logo" />
                                 </div>
@@ -81,9 +89,25 @@ export default {
                                     <img src="https://img.icons8.com/color/96/c-sharp-logo-2.png"
                                         alt="c-sharp-logo-2" />
                                 </div>
+                                <div title="Node.Js">
+                                    <img src="https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000"
+                                        alt="NodeJs" />
+                                </div>
+                                <div title="Express.Js">
+                                    <img src="https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000"
+                                        alt="ExpressJs" />
+                                </div>
+                                <div title="MySql">
+                                    <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo.png"
+                                        alt="external-mysql-an-open-source-relational-database-management-system-logo-color-tal-revivo" />
+                                </div>
                                 <div title="SQLServer">
                                     <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-sql-server-big-data-wanicon-lineal-color-wanicon.png"
                                         alt="external-sql-server-big-data-wanicon-lineal-color-wanicon" />
+                                </div>
+                                <div title="MongoDb">
+                                    <img src="https://img.icons8.com/?size=100&id=74402&format=png&color=000000"
+                                        alt="MongoDb" />
                                 </div>
                                 <div title="Visual Studio">
                                     <img src="https://img.icons8.com/fluency/96/visual-studio.png"
@@ -127,7 +151,7 @@ export default {
                         </a>
                     </li>
                     <li title="Whatsapp">
-                        <a href="https://wa.me/qr/UXWDX7A6BJXKC1" target="_blank">
+                        <a href="https://wa.me/message/4XIEE5MW6UPYA1" target="_blank">
                             <img src="../img/whatsapp.png" alt="">
                         </a>
                     </li>
@@ -245,7 +269,6 @@ export default {
         .skills {
             position: relative;
             top: 180px;
-            left: calc(100% / 10);
             flex-wrap: wrap;
             margin: 0 auto;
         }
