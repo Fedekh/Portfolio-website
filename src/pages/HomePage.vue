@@ -46,8 +46,7 @@ export default {
                         <figure class="skills my-5 code "
                             :class="{ 'skills-enter-active skills-enter': isSkillsVisible }">
                             <div class="d-flex mb-5 gap-4 flex-row align-items-end justify-content-center">
-                                <div class=" d-flex gap-4 flex-row align-items-end justify-content-center"
-                                    data-tooltip="Html5">
+                                <div title="Html5" data-tooltip="Html5">
                                     <img src="https://img.icons8.com/color/96/html-5--v1.png" alt="html-5--v1" />
                                 </div>
                                 <div title="Css3">
